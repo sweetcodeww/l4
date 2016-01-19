@@ -9,7 +9,7 @@ class LoginController extends BaseController{
 				'auth' => 'ok',
 				'msg' => 'Login success !');
 		}else{
-			return ['msg' => 'Login gagal !'];
+			return ['msg' => 'Login Failed !'];
 		}
 	}
 
@@ -40,5 +40,8 @@ class LoginController extends BaseController{
 	public function logout(){
 		Auth::logout();
 		Session::flush();
+		return array(
+			'res' => 'ok',
+			'msg' => 'You are logged out !');
 	}
 }
