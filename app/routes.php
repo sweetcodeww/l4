@@ -27,7 +27,3 @@ Route::get('user',['before' => 'auth', function() {
 	return $user;
 }]);
 
-Route::get('token/user', ['before' => 'csrf', function() {
-	$user = User::all();
-	return $user;
-}]);
